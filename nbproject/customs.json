@@ -2,5 +2,9 @@
     "elements": {
         "ng-include": {}
     },
-    "attributes": {}
+    "attributes": {
+        "aria-expanded": {
+            "context": "button"
+        }
+    }
 }
