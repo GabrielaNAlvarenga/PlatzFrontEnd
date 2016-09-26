@@ -36,7 +36,11 @@ angular.module("platz").controller("categoriaController", function ($scope, $htt
 
         });
     };
-    $scope.listarTodos();
+    
+    window.onload = function (ev){
+        //onload - funções a ser chamadas quando a pagina é carregada
+        $scope.listarTodos();
+    }
 });
 
 
