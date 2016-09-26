@@ -35,7 +35,7 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
 
     </head>
 
-    <body>
+    <body ng-controller="categoriaController">
 
 
         <!-- inicio do projeto aqui-->
@@ -80,88 +80,26 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
                             <th>Opções</th>
                         </tr>
                     </thead>
-                    <tbody id="myTable">
-                        <tr>
-                            <th scope="row">1</th>
+                    <tbody id="myTable">                    
+                        <tr ng-repeat="categoria in categorias">
+                            <th scope="row"></th>
                             <td>
                                 <div >
                                     <img src="../img/outras/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
                                 </div>
                             </td>    
-                            <td>Show</td>                                                   
+                            <td>{{categoria.nome}}</td>                                                   
                             <td>
 
                                 <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
                                 <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <div >
-                                    <img src="../img/outras/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
-                                </div>
-                            </td>    
-                            <td>Show</td>                                                   
-                            <td>
-
-                                <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
-                                <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <div >
-                                    <img src="../img/outras/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
-                                </div>
-                            </td>    
-                            <td>Show</td>                                                   
-                            <td>
-
-                                <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
-                                <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <div >
-                                    <img src="../img/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
-                                </div>
-                            </td>    
-                            <td>Show</td>                                                   
-                            <td>
-
-                                <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
-                                <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>
-                                <div >
-                                    <img src="../img/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
-                                </div>
-                            </td>    
-                            <td>Show</td>                                                   
-                            <td>
-
-                                <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
-                                <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
-                            </td>
-                        </tr>
-
-
-
 
                     </tbody>
                 </table>
             </div>
-            
+
             <div class="col-md-12 text-center">
                 <ul class="pagination  pager" id="myPager"></ul>
             </div>
@@ -301,12 +239,15 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="../lib/bootstrap/mdb.min.js"></script>
-    
+
     <!-- Paginação da tabela -->
     <script type="text/javascript" src="../outros/tabela-responsiva.js"></script>
 
     <!-- angular app script -->
     <script type="text/javascript" src="../js/app.js"></script>
+
+    <!-- angular controller script -->
+    <script src="../js/controller/categoriaController.js" type="text/javascript"></script>
 
 
 </body>

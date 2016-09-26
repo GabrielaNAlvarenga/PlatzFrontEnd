@@ -36,5 +36,8 @@ angular.module("platz").controller("categoriaController", function ($scope, $htt
 
         });
     };
+    $scope.listarTodos();
 });
+
+
 
