@@ -60,7 +60,7 @@ $enable-grid-classes:       true !default;
 $spacer:                     1rem !default;
 $spacer-x:                   $spacer !default;
 $spacer-y:                   $spacer !default;
-$spacers: (
+/*$spacers: (
 0:(
 x:   0,
 y:   0
@@ -77,7 +77,7 @@ y:   ($spacer-y * 1.5)
 x:   ($spacer-x * 3),
 y:   ($spacer-y * 3)
 )
-) !default;
+) !default;*/
 $border-width:               1px !default;
 
 
