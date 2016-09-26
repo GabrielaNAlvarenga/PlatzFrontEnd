@@ -31,12 +31,9 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
         <!-- link com o icone que fica no inicio do navegador -->
         <link rel="icon" href="../img/logo.png">
 
-
-
     </head>
 
     <body ng-controller="categoriaController">
-
 
         <!-- inicio do projeto aqui-->
 
@@ -82,7 +79,7 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
                     </thead>
                     <tbody id="myTable">                    
                         <tr ng-repeat="categoria in categorias">
-                            <th scope="row"></th>
+                            <td scope="row">{{$index + 1}}</td>
                             <td>
                                 <div >
                                     <img src="../img/outras/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
@@ -90,7 +87,6 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
                             </td>    
                             <td>{{categoria.nome}}</td>                                                   
                             <td>
-
                                 <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
                                 <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
                             </td>
@@ -241,7 +237,7 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
     <script type="text/javascript" src="../lib/bootstrap/mdb.min.js"></script>
 
     <!-- Paginação da tabela -->
-    <script type="text/javascript" src="../outros/tabela-responsiva.js"></script>
+    <script type="text/javascript" src="../js/outros/tabela-responsiva.js"></script>
 
     <!-- angular app script -->
     <script type="text/javascript" src="../js/app.js"></script>
