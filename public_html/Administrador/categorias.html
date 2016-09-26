@@ -60,6 +60,9 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#panel32" role="tab"><i class="fa fa-plus fa-2x"></i><br>Cadastrar</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel33" role="tab"><i class="fa fa-trash fa-2x"></i><br>Excluidos</a>
+        </li>
 
     </ul>
 
@@ -76,7 +79,8 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
                         <tr>
                             <th>#</th>
                             <th>Imagem</th>     
-                            <th>Nome</th>                                                 
+                            <th>Nome</th>
+                            <th>Data de cadastro</th>
                             <th>Opções</th>
                         </tr>
                     </thead>
@@ -88,7 +92,8 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
                                     <img src="../img/outras/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
                                 </div>
                             </td>    
-                            <td>{{categoria.nome}}</td>                                                   
+                            <td>{{categoria.nome}}</td>   
+                            <td>{{categoria.dataCadastro}}</td>
                             <td>
 
                                 <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
@@ -138,6 +143,49 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
 
         </div>
         <!--/.Panel 2-->
+        
+        <!-- Painel 3 -->
+        <div class="tab-pane fade in active" id="panel33" role="tabpanel">
+            <br>
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Imagem</th>     
+                            <th>Nome</th>
+                            <th>Data dxdjhnxde cadastro</th>
+                            <th>Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">                    
+                        <tr ng-repeat="categoria in categorias">
+                            <th scope="row"></th>
+                            <td>
+                                <div >
+                                    <img src="../img/outras/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
+                                </div>
+                            </td>    
+                            <td>{{categoria.nome}}</td>   
+                            <td>{{categoria.dataCadastro}}</td>
+                            <td>
+
+                                <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
+                                <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <ul class="pagination  pager" id="myPager"></ul>
+            </div>
+
+        </div>
+        <!-- /.painel 3 -->
 
 
 
