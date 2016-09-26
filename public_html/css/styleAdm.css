@@ -8,6 +8,10 @@ Estilização de toda a pagina administrativa
 */
 
 /*centralizando os titulos das paginas*/
+.fa
+{
+    margin-right: 10px;
+}
 .head-pagina
 {
     text-align: center;
