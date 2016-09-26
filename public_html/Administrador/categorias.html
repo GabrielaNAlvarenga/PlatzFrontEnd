@@ -31,8 +31,6 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
         <!-- link com o icone que fica no inicio do navegador -->
         <link rel="icon" href="../img/logo.png">
 
-
-
     </head>
 
     <body ng-controller="categoriaController">
@@ -86,16 +84,15 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
                     </thead>
                     <tbody id="myTable">                    
                         <tr ng-repeat="categoria in categorias">
-                            <th scope="row"></th>
+                            <th scope="row">{{$index + 1}}</th>
                             <td>
                                 <div >
-                                    <img src="../img/outras/plano-fundo.jpg" alt="Imagem sobre a categoria" class="img-categoria">                                  
+                                    <img src="" alt="Imagem sobre a categoria" class="img-categoria">                                  
                                 </div>
                             </td>    
                             <td>{{categoria.nome}}</td>   
                             <td>{{categoria.dataCadastro}}</td>
                             <td>
-
                                 <a class="btn btn-sm btn-default" data-toggle="modal" data-target="#modalEdita"><i class="fa fa-pencil"></i></a>
                                 <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modalExcluir"><i class="fa fa-trash"></i></a>
                             </td>
@@ -296,8 +293,7 @@ Pagina de Cadastro, consulta , atualização e exclusão de Categorias dos event
 
     <!-- angular controller script -->
     <script src="../js/controller/categoriaController.js" type="text/javascript"></script>
-
-
+    
 </body>
 
 </html>
