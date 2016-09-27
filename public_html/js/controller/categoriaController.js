@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 angular.module("platz").controller("categoriaController", function ($scope, $http) {
 
     //Faz um Get no Web Service recebendo uma URL
@@ -22,6 +16,9 @@ angular.module("platz").controller("categoriaController", function ($scope, $htt
     };
 
     $scope.cadastrar = function (categoria) {
+
+        console.log(categoria);
+
         $http.post(webService + "/categoria", categoria).then(function (response) {
 
             console.log("Categoria Cadastrada com Sucesso");
@@ -36,9 +33,31 @@ angular.module("platz").controller("categoriaController", function ($scope, $htt
 
         });
     };
-    
-    window.onload = function (ev){
-        //onload - funções a ser chamadas quando a pagina é carregada
+
+    $scope.prepararExclusao = function (id) {
+        $scope.categoriaExclusaoId = id;
+    };
+
+    $scope.cancelarExclusao = function () {
+        $scope.categoriaEdicaoId = null;
+    };
+
+    $scope.deletar = function () {
+
+    console.log($scope.categoriaExclusaoId);
+
+        $http.delete(webService + "/categoria/" + $scope.categoriaExclusaoId).then(function (response) {
+
+            console.log("deletou");
+            console.log(response);
+
+        }, function (response) {
+
+        });
+
+    };
+
+    window.onload = function (ev) {
         $scope.listarTodos();
     }
 });
