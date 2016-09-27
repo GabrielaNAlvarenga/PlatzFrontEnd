@@ -64,19 +64,25 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
             <a class="nav-link" data-toggle="tab" href="#panel12" role="tab"><i class="fa fa-star-o"></i> Favoritas</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#panel13" role="tab"><i class="fa fa-trash"></i> Excluidas</a>
+            <a class="nav-link" data-toggle="tab" href="#panel13" role="tab"><i class="fa fa-envelope-o"></i>Mensagens Lidas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel14" role="tab"><i class="fa fa-envelope"></i>Mensagens Não Lidas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#panel15" role="tab"><i class="fa fa-trash"></i> Excluidas</a>
         </li>
     </ul>
 
     <!-- Tab panels -->
     <div class="tab-content conteudo-tab">
 
-        <!--Panel 1-->
+        <!--Panel 1 caixa de entrada de mensagens-->
         <div class="tab-pane fade in active" id="panel11" role="tabpanel">
             <br>
 
             <div class="table-responsive">
-                <table class="table table-hover table-striped">
+                <table class="table table-hover table-striped ">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -97,7 +103,7 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
                             <td>
                                 <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-star fa-1x"></i></a>
                             </td>
-                            <td> <a><span class="glyphicon glyphicon-trash"></span></a> </td>
+                            <td><a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Excluir</a></td>
                             <td><button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#modalMensagem">
                                     Ler Mensagem
                                 </button></td>
@@ -147,12 +153,12 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
         </div>
         <!--/.Panel 1-->
 
-        <!--Panel 2-->
+        <!--Panel 2 mensagens favoritas -->
         <div class="tab-pane fade" id="panel12" role="tabpanel">
             <br>
 
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover table-striped">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -173,7 +179,7 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
                             <td>
                                 <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-star fa-1x"></i></a>
                             </td>
-                            <td> <a><span class="glyphicon glyphicon-trash"></span></a> </td>
+                            <td><a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Excluir</a></td>
                             <td><button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#modalMensagemFavorita">
                                     Ler Mensagem
                                 </button></td>
@@ -224,12 +230,166 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
         </div>
         <!--/.Panel 2-->
 
-        <!--Panel 3-->
+        <!--Panel 3 mensagens lidas-->
         <div class="tab-pane fade" id="panel13" role="tabpanel">
             <br>
 
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Email</th>
+                            <th>Mensagem</th>
+                            <th>Assunto</th>
+                            <th>Favoritar</th>
+                            <th>Excluir</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable2">
+                        <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-star fa-1x"></i></a>
+                            </td>
+                            <td><a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Excluir</a></td>
+                            <td><button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#modalMensagemFavorita">
+                                    Ler Mensagem
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>  <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>  <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>            
+                    </tbody>
+                </table>
+
+            </div><!-- fim da div table-responsive -->
+            <div class="col-md-12 text-center">
+                <ul class="pagination pager" id="myPager2"></ul>
+            </div>
+
+
+        </div>
+        <!--/.Panel 3-->
+
+        <!--Panel 4 mensagens não lidas-->
+        <div class="tab-pane fade" id="panel14" role="tabpanel">
+            <br>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Email</th>
+                            <th>Mensagem</th>
+                            <th>Assunto</th>
+                            <th>Favoritar</th>
+                            <th>Excluir</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable2">
+                        <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-star fa-1x"></i></a>
+                            </td>
+                            <td><a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Excluir</a></td>
+                            <td><button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#modalMensagemFavorita">
+                                    Ler Mensagem
+                                </button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>  <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>  <tr>
+                            <td>1</td>
+                            <td>Gabrielaalvarenga@gmail.com</td>
+                            <td>lalalalala ....</td>
+                            <td>Denuncia</td>
+                            <td>
+                                <input type="checkbox" value="">
+                            </td>
+                        </tr>            
+                    </tbody>
+                </table>
+
+            </div><!-- fim da div table-responsive -->
+            <div class="col-md-12 text-center">
+                <ul class="pagination pager" id="myPager2"></ul>
+            </div>
+
+
+        </div>
+        <!--/.Panel 4-->
+
+        <!--Panel 5 lixeira -->
+        <div class="tab-pane fade" id="panel15" role="tabpanel">
+            <br>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-striped">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -237,6 +397,7 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
                             <th>Mensagem</th>
                             <th>Assunto</th>
                             <th>Remover da lixeira</th>
+                            <th>Restaurar</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -246,7 +407,8 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
                             <td>Gabrielaalvarenga@gmail.com</td>
                             <td>lalalalala ....</td>
                             <td>Denuncia</td>  
-                            <td><a><span class="glyphicon glyphicon-trash"></span></a> </td>
+                            <td><a class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Remover</a></td>
+                            <td><a class="btn btn-sm btn-default"><i class="fa fa-undo"></i>Restaurar</a></td>
                             <td><button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#modalMensagemExcluida">
                                     Ler Mensagem
                                 </button></td>
@@ -541,7 +703,7 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
 
     <!-- SCRIPTS -->
 
-   <!-- JQuery -->
+    <!-- JQuery -->
     <script type="text/javascript" src="../lib/jquery/jquery-2.2.3.min.js"></script>
 
     <!-- Bootstrap tooltips -->
@@ -552,7 +714,7 @@ porem quando ele tiver navegando pelas paginas , ela vai ter como "nome" pagina 
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="../lib/bootstrap/mdb.min.js"></script>
-    
+
     <!-- Paginação da tabela -->
     <script type="text/javascript" src="../js/outros/tabela-responsiva.js"></script>
 
